@@ -1,0 +1,41 @@
+{
+    "name": "NFL Player Stats",
+    "version": "1.0.0",
+    "description": "Display player stats",
+    "main": "index.js",
+    "author": "Chau",
+    "scripts": {
+        "build": "webpack --config webpack.dev.js",
+        "build:prod": "webpack --config webpack.prod.js",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.10.6",
+        "@emotion/styled": "^11.10.6",
+        "@mui/material": "^5.11.11",
+        "@mui/lab":"5.0.0-alpha.173",
+        "axios": "^1.7.8",
+        "dotenv": "^16.4.5",
+        "hbs": "^4.2.0",
+        "postgres": "^3.4.5",
+        "raw-loader": "^4.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.6.1",
+        "react-scripts": "5.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^1.0.1",
+        "eslint": "^8.24.0",
+        "eslint-plugin-react": "^7.32.0",
+        "terser-webpack-plugin": "^1.4.5",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-merge": "^4.2.2",
+        "webpack-node-externals": "^1.7.2"
+    }
+}
