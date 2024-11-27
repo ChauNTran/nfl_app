@@ -4,7 +4,7 @@
 1) Build a user interface in ReactJS with a navbar and two different tabs: 'Player Data' and 'Player Stats'
 2) One tab should display a table with all of the players in the 'players' table and the associated columns (name, height, age, etc)
 3) A second tab should have two visuals associated with the player stats in the 'player_stats' table. You can choose the statistic and visual that you want to show.
-4) Build an API to read the data from the database above.
+4) Build an API to read the data from the database sent via email.
 
 #### GitHub and Directions
 1) Fork this repo and code up your solution for review by the Summit team.
