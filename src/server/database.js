@@ -36,5 +36,16 @@ db.getProfiles = async function () {
     `
     return results;
 }
+db.getProfilesWithPosition = async function (position) {
+    const results = await sql`
+    SELECT players.*, player_stats.*
+    FROM players
+    FULL OUTER JOIN player_stats
+    ON players.player_id = player_stats.player_id
+    WHERE players.position = ${position}
+    `
+    return results;
+}
+
 
 module.exports = db

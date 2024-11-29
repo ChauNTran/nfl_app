@@ -2,11 +2,9 @@ import axios from 'axios'
 
 const baseURL = (typeof(window) !== 'undefined' ? window.location.origin : null) ;
 
-
 async function get(path)
 {
-    await axios.get(baseURL + path).then((res) => {
-        console.log(res)
+    return await axios.get(baseURL + path).then((res) => {
         return res.data;
     }).catch((error) => {
         throw error;
@@ -15,14 +13,17 @@ async function get(path)
 
 export async function getPlayersInfo()
 {
-    // return get('/player/info/all');
     return await get('/player/info/all');
 }
 export async function getPlayersStats()
 {
-    return get('/player/stats/all');
+    return await get('/player/stats/all');
 }
 export async function getPlayersProfile()
 {
-    return get('/player/profile/all');
+    return await get('/player/profile/all');
+}
+export async function getProfilesWithPosition(position)
+{
+    return await get('/player/profile/' + position);
 }

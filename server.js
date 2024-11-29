@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const dotEnv = require('dotenv');
 let dotEnvPath = 'dev.env';
 dotEnv.config({path: dotEnvPath});
-const db =  require('./src/server/db.js');
+// const db =  require('./src/server/database.js');
 const playerRouter = require('./src/server/playerRouter.js');
 
 app.set('view engine', 'html');
@@ -16,8 +16,8 @@ global.publicFolder = __dirname + '/public';
 
 
 app.get('/', async (req, res) => {
-    let results = await db.getProfiles();
-    res.render('index.hbs', {RESULTS : JSON.stringify(results)})
+    // let results = await db.getProfiles();
+    res.render('index.hbs')
 })
 
 app.use('/player', playerRouter);

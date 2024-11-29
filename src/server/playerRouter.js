@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require ('./db.js')
+const db = require ('./database.js')
 
 router.get('/info/all', async (req, res) => {
 
@@ -22,6 +22,11 @@ router.get('/profile/all', async (req, res) => {
     res.send({responseType: 'success', results})
 
 });
+router.get('/profile/:position', async (req, res) => {
 
+    let results = await db.getProfilesWithPosition(req.params.position);
+    res.send({responseType: 'success', results})
+
+});
 
 module.exports = router;
