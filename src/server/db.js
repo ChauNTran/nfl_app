@@ -1,11 +1,11 @@
 const postgres = require('postgres');
 
 const sql = postgres({
-    host: 'interview-nfl.cdbhjddhnyl2.us-east-1.rds.amazonaws.com', //process.env.DB_HOST,
-    database:'nfl_stats',
-    port: 5432, //process.env.DB_PORT,
-    password: 'Summit123', //process.env.DB_PASS,
-    username: 'postgres',//process.env.DB_USER
+    host: process.env.DB_HOST,
+    database:process.env.DB_NAME,
+    port: process.env.DB_PORT ,
+    password: process.env.DB_PASS,
+    username: process.env.DB_USER,
     ssl:{ rejectUnauthorized: false },
 })
 

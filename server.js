@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const http = require('http');
-const dotEnv = require('dotenv');
 const hbs = require('hbs');
+const dotEnv = require('dotenv');
+let dotEnvPath = 'dev.env';
+dotEnv.config({path: dotEnvPath});
 const db =  require('./src/server/db.js');
 const playerRouter = require('./src/server/playerRouter.js');
 
@@ -11,8 +13,6 @@ app.engine('html', hbs.__express);
 app.use(express.static(__dirname + '/public'));
 global.publicFolder = __dirname + '/public';
 
-let dotEnvPath = 'dev.env';
-dotEnv.config({path: dotEnvPath});
 
 
 app.get('/', async (req, res) => {
