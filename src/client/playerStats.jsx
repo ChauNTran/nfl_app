@@ -22,11 +22,12 @@ function Stats(props)
         stats > 0 &&
         <Stack direction='column'>
           <Stack direction='row' justifyContent='space-between'>
-            <Stack direction='row' spacing={2}>
+            <Stack direction='row' alignItems='center' spacing={2}>
+              <img style={{width:14, height:14}} src={`/assets/icons/${pKey}.webp`}/>
+
               <Typography sx={{width:120}} >
                 {label}
               </Typography>
-              <img style={{width:14}} src={`/assets/svg-icons/${pKey}.svg`}/>
             </Stack>
             <Typography variant='body2'>{stats}</Typography>
           </Stack>
@@ -54,7 +55,7 @@ export function PlayerStats(props)
         <Grid container spacing={2}>
         {
           selected.map((player) => (
-            <Grid item xs={3}>
+            <Grid item xs={3} key={`player-card-${player.player_id}`}>
               <Card sx={{ maxWidth: 320, height:480 }}>
                 <CardHeader
                   title={`${player.first_name} ${player.last_name}`}
