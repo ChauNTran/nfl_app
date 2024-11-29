@@ -16,7 +16,6 @@ global.publicFolder = __dirname + '/public';
 
 
 app.get('/', async (req, res) => {
-    // let results = await db.getProfiles();
     res.render('index.hbs')
 })
 
