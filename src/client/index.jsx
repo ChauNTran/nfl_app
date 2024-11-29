@@ -100,7 +100,7 @@ function App() {
         <Box sx={{ borderBottom: 1, borderColor: 'divider',
           position: 'sticky', top:0, backgroundColor:'white', zIndex:1}}>
           <TabList onChange={setTab}>
-            <Tab label="Player Info" value="1" />
+            <Tab label="Player Data" value="1" />
             <Tab label="Player Stats" value="2" />
           </TabList>
         </Box>

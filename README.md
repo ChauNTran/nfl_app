@@ -1,13 +1,22 @@
 # NFL Player App
 
-#### Assignment
-1) Build a user interface in ReactJS with a navbar and two different tabs: 'Player Data' and 'Player Stats'
-2) One tab should display a table with all of the players in the 'players' table and the associated columns (name, height, age, etc)
-3) A second tab should have two visuals associated with the player stats in the 'player_stats' table. You can choose the statistic and visual that you want to show.
-4) Build an API to read the data from the database sent via email.
+#### Instructions
+1. Create a dev.env file in the project root directory with the following info
 
-#### GitHub and Directions
-1) Fork this repo and code up your solution for review by the Summit team.
-2) The app does NOT need to be hosted anywhere. We will simply run the frontend and API locally to see your app.
-3) Please email Scott and Quan by Sunday at 10:00pm with your completed assignment (scott.senkier@summitllc.us and quan.nguyen@summitllc.us).
-4) We will look at your forked repo and get back to you if we have any questions.
+PORT=3000
+DB_HOST=<insert host>
+DB_NAME=<insert database name>
+DB_PORT=<insert database port>
+DB_USER=<insert username>
+DB_PASS=<insert password>
+
+2. Run npm install to install all packages
+3. Run npm run build:prod to bundle the application
+4. Run npm run start to host
+5. Go to http://localhost:3000 to view the app
+
+
+#### Notes
+I want to make the player stats look like a trading card. For task 3, the visuals are the icons next to the stats labels. I know you say to only show two visuals, but I thought it makes sense to show all the stats related to the player position.
+The stats bar compares selected players' stats with the highest stats on the list, regardless of their positions. So if you want a fair comparison, select players with the same position.
+
